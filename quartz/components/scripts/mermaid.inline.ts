@@ -224,17 +224,31 @@ document.addEventListener("nav", async () => {
       startOnLoad: false,
       securityLevel: "loose",
       theme: darkMode ? "dark" : "base",
-      themeVariables: {
-        fontFamily: computedStyleMap["--codeFont"],
-        primaryColor: computedStyleMap["--light"],
-        primaryTextColor: computedStyleMap["--darkgray"],
-        primaryBorderColor: computedStyleMap["--tertiary"],
-        lineColor: computedStyleMap["--darkgray"],
-        secondaryColor: computedStyleMap["--secondary"],
-        tertiaryColor: computedStyleMap["--tertiary"],
-        clusterBkg: computedStyleMap["--light"],
-        edgeLabelBackground: computedStyleMap["--highlight"],
-      },
+      themeVariables: darkMode
+        ? {
+            fontFamily: computedStyleMap["--codeFont"],
+            primaryColor: "#1e3a5f",
+            primaryTextColor: "#ffffff",
+            primaryBorderColor: "#5ba3d9",
+            lineColor: "#5ba3d9",
+            secondaryColor: "#2a4a6f",
+            tertiaryColor: "#1a3050",
+            clusterBkg: "#0f2030",
+            edgeLabelBackground: "#1e3a5f",
+            nodeTextColor: "#ffffff",
+          }
+        : {
+            fontFamily: computedStyleMap["--codeFont"],
+            primaryColor: "#d6e8f7",
+            primaryTextColor: "#1a1a1a",
+            primaryBorderColor: "#2a6496",
+            lineColor: "#2a6496",
+            secondaryColor: "#e8f0f8",
+            tertiaryColor: "#f0f6fc",
+            clusterBkg: "#f5f9fd",
+            edgeLabelBackground: "#d6e8f7",
+            nodeTextColor: "#1a1a1a",
+          },
     })
 
     await mermaid.run({ nodes })

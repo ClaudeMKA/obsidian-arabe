@@ -1,99 +1,19 @@
 @use "./base.scss";
 
-// ===== MERMAID DARK MODE =====
-[saved-theme="dark"] .mermaid {
-  // ALL text white
-  text, span, p, div, foreignObject, foreignObject *,
-  .nodeLabel, .edgeLabel, .label,
-  .mindmap-node-label, .cluster-label,
-  .flowchart-label, .edgeLabel span,
-  tspan {
+// Force white text in dark mode Mermaid SVGs
+[saved-theme="dark"] .mermaid svg {
+  text, tspan, .nodeLabel, .edgeLabel, .label span,
+  foreignObject div, foreignObject span, foreignObject p {
     color: #ffffff !important;
     fill: #ffffff !important;
   }
-
-  // ALL shapes dark background with visible border
-  rect, circle, polygon, ellipse, path.label-container,
-  .node rect, .node circle, .node polygon, .node ellipse,
-  .mindmap-node rect, .mindmap-node circle, .mindmap-node ellipse,
-  .cluster rect {
-    fill: #1e3a4f !important;
-    stroke: #7bb8d4 !important;
-    stroke-width: 2px !important;
-  }
-
-  // Lines/edges visible
-  .edgePath path, .flowchart-link, line {
-    stroke: #7bb8d4 !important;
-    stroke-width: 2px !important;
-  }
-
-  // Arrowheads
-  marker path {
-    fill: #7bb8d4 !important;
-    stroke: #7bb8d4 !important;
-  }
-
-  // Subgraph/cluster background
-  .cluster rect {
-    fill: #162230 !important;
-    stroke: #4a8ab0 !important;
-  }
-
-  // Root node mindmap
-  .mindmap-node:first-of-type circle,
-  .mindmap-node:first-of-type rect {
-    fill: #1a4a6a !important;
-    stroke: #7bb8d4 !important;
-  }
 }
 
-// ===== MERMAID LIGHT MODE =====
-[saved-theme="light"] .mermaid {
-  text, span, p, div, foreignObject, foreignObject *,
-  .nodeLabel, .edgeLabel, .label,
-  .mindmap-node-label, .cluster-label,
-  .flowchart-label, .edgeLabel span,
-  tspan {
+// Force dark text in light mode Mermaid SVGs
+[saved-theme="light"] .mermaid svg {
+  text, tspan, .nodeLabel, .edgeLabel, .label span,
+  foreignObject div, foreignObject span, foreignObject p {
     color: #1a1a1a !important;
     fill: #1a1a1a !important;
-  }
-
-  rect, circle, polygon, ellipse, path.label-container,
-  .node rect, .node circle, .node polygon, .node ellipse,
-  .mindmap-node rect, .mindmap-node circle, .mindmap-node ellipse {
-    fill: #dceaf5 !important;
-    stroke: #2a6496 !important;
-    stroke-width: 2px !important;
-  }
-
-  .edgePath path, .flowchart-link, line {
-    stroke: #2a6496 !important;
-  }
-
-  marker path {
-    fill: #2a6496 !important;
-  }
-
-  .cluster rect {
-    fill: #eef4fa !important;
-    stroke: #2a6496 !important;
-  }
-}
-
-// ===== FALLBACK (no theme attribute) =====
-.mermaid {
-  text, span, foreignObject, foreignObject *,
-  .nodeLabel, .edgeLabel, .label, tspan {
-    color: #1a1a1a !important;
-    fill: #1a1a1a !important;
-  }
-}
-
-[saved-theme="dark"] .mermaid {
-  text, span, foreignObject, foreignObject *,
-  .nodeLabel, .edgeLabel, .label, tspan {
-    color: #ffffff !important;
-    fill: #ffffff !important;
   }
 }
