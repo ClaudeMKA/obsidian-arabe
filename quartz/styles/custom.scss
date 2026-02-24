@@ -1,49 +1,99 @@
 @use "./base.scss";
 
-// Mermaid diagrams: fix contrast in dark mode
+// ===== MERMAID DARK MODE =====
 [saved-theme="dark"] .mermaid {
-  .nodeLabel,
-  .edgeLabel,
-  .label,
-  span,
-  text {
-    color: #ebebec !important;
-    fill: #ebebec !important;
+  // ALL text white
+  text, span, p, div, foreignObject, foreignObject *,
+  .nodeLabel, .edgeLabel, .label,
+  .mindmap-node-label, .cluster-label,
+  .flowchart-label, .edgeLabel span,
+  tspan {
+    color: #ffffff !important;
+    fill: #ffffff !important;
   }
 
-  .node rect,
-  .node circle,
-  .node polygon,
-  .node ellipse {
-    fill: #2d2d2f !important;
-    stroke: #7b97aa !important;
+  // ALL shapes dark background with visible border
+  rect, circle, polygon, ellipse, path.label-container,
+  .node rect, .node circle, .node polygon, .node ellipse,
+  .mindmap-node rect, .mindmap-node circle, .mindmap-node ellipse,
+  .cluster rect {
+    fill: #1e3a4f !important;
+    stroke: #7bb8d4 !important;
+    stroke-width: 2px !important;
   }
 
-  .edgePath path {
-    stroke: #7b97aa !important;
+  // Lines/edges visible
+  .edgePath path, .flowchart-link, line {
+    stroke: #7bb8d4 !important;
+    stroke-width: 2px !important;
   }
 
-  // Mindmap nodes
-  .mindmap-node rect,
-  .mindmap-node circle {
-    fill: #2d2d2f !important;
-    stroke: #7b97aa !important;
+  // Arrowheads
+  marker path {
+    fill: #7bb8d4 !important;
+    stroke: #7bb8d4 !important;
   }
 
-  .mindmap-node-label {
-    color: #ebebec !important;
+  // Subgraph/cluster background
+  .cluster rect {
+    fill: #162230 !important;
+    stroke: #4a8ab0 !important;
+  }
+
+  // Root node mindmap
+  .mindmap-node:first-of-type circle,
+  .mindmap-node:first-of-type rect {
+    fill: #1a4a6a !important;
+    stroke: #7bb8d4 !important;
   }
 }
 
-// Mindmap text visibility fix for both modes
-.mermaid .mindmap-node text,
-.mermaid .mindmap-node foreignObject div {
-  color: #ebebec !important;
-  fill: #ebebec !important;
+// ===== MERMAID LIGHT MODE =====
+[saved-theme="light"] .mermaid {
+  text, span, p, div, foreignObject, foreignObject *,
+  .nodeLabel, .edgeLabel, .label,
+  .mindmap-node-label, .cluster-label,
+  .flowchart-label, .edgeLabel span,
+  tspan {
+    color: #1a1a1a !important;
+    fill: #1a1a1a !important;
+  }
+
+  rect, circle, polygon, ellipse, path.label-container,
+  .node rect, .node circle, .node polygon, .node ellipse,
+  .mindmap-node rect, .mindmap-node circle, .mindmap-node ellipse {
+    fill: #dceaf5 !important;
+    stroke: #2a6496 !important;
+    stroke-width: 2px !important;
+  }
+
+  .edgePath path, .flowchart-link, line {
+    stroke: #2a6496 !important;
+  }
+
+  marker path {
+    fill: #2a6496 !important;
+  }
+
+  .cluster rect {
+    fill: #eef4fa !important;
+    stroke: #2a6496 !important;
+  }
 }
 
-[saved-theme="light"] .mermaid .mindmap-node text,
-[saved-theme="light"] .mermaid .mindmap-node foreignObject div {
-  color: #2b2b2b !important;
-  fill: #2b2b2b !important;
+// ===== FALLBACK (no theme attribute) =====
+.mermaid {
+  text, span, foreignObject, foreignObject *,
+  .nodeLabel, .edgeLabel, .label, tspan {
+    color: #1a1a1a !important;
+    fill: #1a1a1a !important;
+  }
+}
+
+[saved-theme="dark"] .mermaid {
+  text, span, foreignObject, foreignObject *,
+  .nodeLabel, .edgeLabel, .label, tspan {
+    color: #ffffff !important;
+    fill: #ffffff !important;
+  }
 }
