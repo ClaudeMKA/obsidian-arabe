@@ -11,12 +11,23 @@ tags:
 - [[Revision - Grammaire Arabe]] — Types de mots, ma'rifa/nakira, i'rab
 - [[Revision Resume]] — Résumé complet
 
-## Les noms et pronoms
-- [[Damaair - Les pronoms]] — الضمائر
+## Les pronoms — الضمائر
+- [[Damaair - Les pronoms]] — Vue d'ensemble
+- [[Damaair Al-Mutakallim - 1ere personne]] — المتكلم (أنا / نحنُ)
+- [[Damaair Al-Mukhatab - 2eme personne]] — المخاطب (أنتَ / أنتِ / أنتُم...)
+- [[Damaair Al-Ghaib - 3eme personne]] — الغائب (هُوَ / هِيَ / هُم...)
+
+## Les noms spéciaux
 - [[Ism Ichara - Demonstratifs]] — اسم الإشارة
 - [[Ism Mawsul - Pronom relatif]] — الاسم الموصول
 - [[Ism Istifham - Interrogatifs]] — اسم الاستفهام
 - [[Al-Asma Al-Khamsa - Les 5 noms]] — الأسماء الخمسة
+
+## Le verbe — الفعل
+- [[Al-Fi3l Al-Madi - Le passe]] — الفعل الماضي (كَتَبَ)
+- [[Al-Fi3l Al-Mudari3 - Le present]] — الفعل المضارع (يَكْتُبُ)
+- [[Al-Fi3l Al-Amr - L'ordre]] — فعل الأمر (اُكْتُبْ)
+- [[Al-Jumla Al-Fi3liyya - La phrase verbale]] — فعل + فاعل + مفعول به
 
 ## Syntaxe et accord
 - [[Na3t Man3ut - Adjectif qualificatif]] — النعت والمنعوت
@@ -26,6 +37,8 @@ tags:
 
 ## Particules et adverbes
 - [[Huruf Al-Jar - Prepositions]] — حروف الجر
+- [[Ba - Avec Par]] — بِـ (avec / par / au moyen de)
+- [[Lam Al-Jar - Li pour a]] — لِـ (pour / à / appartient à)
 - [[3inda - Chez Avoir]] — عِندَ
 - [[Ma3a - Avec]] — مَعَ
 - [[Qabla Ba3da - Avant Apres]] — قَبْلَ / بَعْدَ
@@ -56,3 +69,5 @@ tags:
 | Les couleurs | [[Exo - Al-Alwan Couleurs]] |
 | Les nombres | [[Exo - Al-3adad Nombres]] |
 | **Revision finale** | [[Exo - Revision Finale]] |
+| **CONTRÔLE GÉNÉRAL** | [[Exo - Controle General]] |
+| **TRADUCTION (120 phrases)** | [[Exo - Traduction Phrases]] |
